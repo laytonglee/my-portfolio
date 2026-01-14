@@ -65,7 +65,7 @@ const SkillsSection = () => {
         <motion.div
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
-          className="mt-12 sm:mt-20 md:mt-24 lg:mt-28 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-x-8 sm:gap-x-10 md:gap-x-12 gap-y-12 sm:gap-y-16 md:gap-y-20 lg:gap-y-24 place-items-center"
+          className="mt-12 sm:mt-20 md:mt-24 lg:mt-28 grid grid-cols-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-8 gap-x-8 sm:gap-x-10 md:gap-x-12 gap-y-12 sm:gap-y-16 md:gap-y-20 lg:gap-y-24 place-items-center"
           variants={containerVariants}
         >
           {SKILLS.map((skill, idx) => {
@@ -92,6 +92,13 @@ const SkillsSection = () => {
                     <skill.component />
                   )}
                 </motion.div>
+                <motion.p
+                  className={`text-sm sm:text-base font-medium text-center relative z-10 ${
+                    isDarkMode ? "text-gray-300" : "text-gray-700"
+                  }`}
+                >
+                  {skill.name}
+                </motion.p>
               </motion.div>
             );
           })}

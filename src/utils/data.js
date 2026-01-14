@@ -39,6 +39,17 @@ import { GraduationIcon } from "../assets/icons/GraduationIcon";
 import { GlobeIcon } from "../assets/icons/GlobeIcon";
 import { LeaderIcon } from "../assets/icons/LeaderIcon";
 import { AiIcon } from "../assets/icons/AiIcon";
+import { VueIcon } from "../assets/icons/VueIcon";
+import { BootstrapIcon } from "../assets/icons/BootstrapIcon";
+import { NodeJsIcon } from "../assets/icons/NodeJsIcon";
+import { ExpressJsIcon } from "../assets/icons/ExpressJsIcon";
+import { FlaskIcon } from "../assets/icons/FlaskIcon";
+import { FastApiIcon } from "../assets/icons/FastApiIcon";
+import { PostgreSqlIcon } from "../assets/icons/PostgreSqlIcon";
+import { Mongodb } from "../assets/icons/Mongodb";
+import { HuggingFaceIcon } from "../assets/icons/HuggingFaceIcon";
+import { GithubIcon } from "../assets/icons/GithubIcon";
+import { FirebaseIcon } from "../assets/icons/FirebaseIcon";
 
 export const SKILLS = [
   // 🌐 Core Languages
@@ -72,6 +83,12 @@ export const SKILLS = [
     originalSvg: Tailwindcss,
     size: "w-20 h-20",
   },
+  {
+    name: "Bootstrap",
+    component: BootstrapIcon,
+    originalSvg: BootstrapIcon,
+    size: "w-20 h-20",
+  },
 
   // ⚡ Frameworks
   {
@@ -81,23 +98,54 @@ export const SKILLS = [
     size: "w-20 h-20",
   },
   {
+    name: "Vue Js",
+    component: VueIcon,
+    originalSvg: VueIcon,
+    size: "w-20 h-20",
+  },
+  {
+    name: "Next Js",
+    component: NextJsIcon,
+    originalSvg: NextJsIcon,
+    size: "w-20 h-20",
+  },
+  {
     name: "Laravel",
     component: LaravelIcon,
     originalSvg: LaravelIcon,
     size: "w-20 h-20",
   },
-  // {
-  //   name: "Next",
-  //   component: NextJsIcon,
-  //   originalSvg: NextJsIcon,
-  //   size: "w-20 h-20",
-  // },
-  // {
-  //   name: "Springboot",
-  //   component: SpringBootIcon,
-  //   originalSvg: SpringBootIcon,
-  //   size: "w-20 h-20",
-  // },
+  {
+    name: "Node Js",
+    component: NodeJsIcon,
+    originalSvg: NodeJsIcon,
+    size: "w-20 h-20",
+  },
+  {
+    name: "Express Js",
+    component: ExpressJsIcon,
+    originalSvg: ExpressJsIcon,
+    size: "w-20 h-20",
+  },
+
+  {
+    name: "Springboot",
+    component: SpringBootIcon,
+    originalSvg: SpringBootIcon,
+    size: "w-20 h-20",
+  },
+  {
+    name: "Flask",
+    component: FlaskIcon,
+    originalSvg: FlaskIcon,
+    size: "w-20 h-20",
+  },
+  {
+    name: "FastAPI",
+    component: FastApiIcon,
+    originalSvg: FastApiIcon,
+    size: "w-20 h-20",
+  },
 
   // 🗄 Database
   {
@@ -106,12 +154,36 @@ export const SKILLS = [
     originalSvg: MySqlIcon,
     size: "w-20 h-20",
   },
+  {
+    name: "Mongo DB",
+    component: Mongodb,
+    originalSvg: Mongodb,
+    size: "w-20 h-20",
+  },
+  {
+    name: "Postgre SQL",
+    component: PostgreSqlIcon,
+    originalSvg: PostgreSqlIcon,
+    size: "w-20 h-20",
+  },
 
   // 🔧 Tools & Platforms
   {
     name: "Git",
     component: GitIcon,
     originalSvg: GitIcon,
+    size: "w-20 h-20",
+  },
+  {
+    name: "Github",
+    component: GithubIcon,
+    originalSvg: GithubIcon,
+    size: "w-20 h-20",
+  },
+  {
+    name: "Hugging Face",
+    component: HuggingFaceIcon,
+    originalSvg: HuggingFaceIcon,
     size: "w-20 h-20",
   },
   {
