@@ -1,7 +1,7 @@
 export const FastApiIcon = ({ className, ...props }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    clasName={className}
+    className={className}
     viewBox="0 0 128 128"
     {...props}
   >

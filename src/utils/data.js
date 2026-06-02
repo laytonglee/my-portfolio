@@ -50,6 +50,8 @@ import { Mongodb } from "../assets/icons/Mongodb";
 import { HuggingFaceIcon } from "../assets/icons/HuggingFaceIcon";
 import { GithubIcon } from "../assets/icons/GithubIcon";
 import { FirebaseIcon } from "../assets/icons/FirebaseIcon";
+import { PytorchIcon } from "../assets/icons/PytorchIcon";
+import { TensorFlowIcon } from "../assets/icons/TensorFlowIcon";
 
 export const SKILLS = [
   // 🌐 Core Languages
@@ -164,6 +166,18 @@ export const SKILLS = [
     name: "Postgre SQL",
     component: PostgreSqlIcon,
     originalSvg: PostgreSqlIcon,
+    size: "w-20 h-20",
+  },
+  {
+    name: "Pytorch",
+    component: PytorchIcon,
+    originalSvg: PytorchIcon,
+    size: "w-20 h-20",
+  },
+  {
+    name: "TensorFlow",
+    component: TensorFlowIcon,
+    originalSvg: TensorFlowIcon,
     size: "w-20 h-20",
   },
 
