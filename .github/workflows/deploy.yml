@@ -38,6 +38,7 @@ jobs:
           port: ${{ secrets.VPS_PORT }}
           source: portfolio-dist.tar.gz
           target: /home/${{ secrets.VPS_USER }}/apps/portfolio
+          overwrite: true
 
       - name: Deploy on VPS
         uses: appleboy/ssh-action@v1.0.3
@@ -45,19 +46,29 @@ jobs:
           host: ${{ secrets.VPS_HOST }}
           username: ${{ secrets.VPS_USER }}
           key: ${{ secrets.VPS_SSH_KEY }}
+          passphrase: ${{ secrets.SSH_PASSPHRASE }}
           port: ${{ secrets.VPS_PORT }}
           script: |
             set -e
 
-            APP_DIR="/home/ubuntu/apps/portfolio"
+            APP_DIR="/home/${{ secrets.VPS_USER }}/apps/portfolio"
 
-            rm -rf "$APP_DIR/dist"
+            echo "Creating app directory..."
             mkdir -p "$APP_DIR/dist"
 
+            echo "Removing old build..."
+            rm -rf "$APP_DIR/dist"
+
+            echo "Creating new dist folder..."
+            mkdir -p "$APP_DIR/dist"
+
+            echo "Extracting new build..."
             tar -xzf "$APP_DIR/portfolio-dist.tar.gz" -C "$APP_DIR/dist"
 
+            echo "Removing uploaded archive..."
             rm -f "$APP_DIR/portfolio-dist.tar.gz"
 
+            echo "Reloading Nginx..."
             docker exec nginx_proxy nginx -s reload
 
             echo "Portfolio deployed successfully."
