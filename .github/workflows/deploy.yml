@@ -53,20 +53,20 @@ jobs:
 
             APP_DIR="/home/${{ secrets.VPS_USER }}/apps/portfolio"
 
-            echo "Creating app directory..."
+            echo "Creating dist directory if not exists..."
             mkdir -p "$APP_DIR/dist"
 
-            echo "Removing old build..."
-            rm -rf "$APP_DIR/dist"
-
-            echo "Creating new dist folder..."
-            mkdir -p "$APP_DIR/dist"
+            echo "Removing old build files inside dist..."
+            find "$APP_DIR/dist" -mindepth 1 -delete
 
             echo "Extracting new build..."
             tar -xzf "$APP_DIR/portfolio-dist.tar.gz" -C "$APP_DIR/dist"
 
             echo "Removing uploaded archive..."
             rm -f "$APP_DIR/portfolio-dist.tar.gz"
+
+            echo "Checking deployed files..."
+            ls -la "$APP_DIR/dist"
 
             echo "Reloading Nginx..."
             docker exec nginx_proxy nginx -s reload
