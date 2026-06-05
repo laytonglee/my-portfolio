@@ -240,7 +240,7 @@ export const PROJECTS = [
     description:
       "Built a FastAPI chatbot for answering AUPP-related questions using trained ML models, embeddings, and a simple web interface.",
     image:
-      "https://images.unsplash.com/photo-1587560699334-cc4ff634909a?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?auto=format&fit=crop&w=800&q=80",
     tags: ["FastAPI", "Machine Learning", "NLP", "Docker"],
     liveUrl: "#",
     githubURL: "https://github.com/laytonglee/chatbot-fastapi-app",
@@ -253,7 +253,7 @@ export const PROJECTS = [
     description:
       "Built a full-stack, role-based library management system for managing books, borrowing, returns, users, notifications, reports, and audit logs.",
     image:
-      "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1521587760476-6c12a4b040da?auto=format&fit=crop&w=800&q=80",
     tags: ["React", "Express", "PostgreSQL", "Prisma"],
     liveUrl: "#",
     githubURL: "https://github.com/laytonglee/library-management-system",
@@ -266,7 +266,7 @@ export const PROJECTS = [
     description:
       "Built a full-stack freelancer marketplace for clients to post projects, freelancers to submit proposals, manage contracts, chat in real time, and leave reviews.",
     image:
-      "https://images.unsplash.com/photo-1554224154-26032ffc0d07?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=800&q=80",
     tags: ["Next.js", "Spring Boot", "PostgreSQL", "Cloudflare R2"],
     liveUrl: "https://khmerlance.site",
     githubURL: "https://github.com/laytonglee/additi-final-project",
@@ -277,12 +277,12 @@ export const PROJECTS = [
     id: 5,
     title: "Personal Portfolio Website",
     description:
-      "Designed and developed a personal portfolio website to showcase projects and skills using modern frontend technologies.",
+      "Built a responsive personal portfolio to showcase projects, skills, education, experience, certifications, and contact information.",
     image:
-      "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?auto=format&fit=crop&w=800&q=80", // Laptop with code and design
-    tags: ["React", "TailwindCSS", "JavaScript"],
-    liveUrl: "#",
-    githubURL: "#",
+      "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80",
+    tags: ["React", "Tailwind CSS", "Framer Motion"],
+    liveUrl: "https://my-portfolio-livid-three-19.vercel.app",
+    githubURL: "https://github.com/laytonglee/my-portfolio",
     featured: false,
     category: "Web Development",
   },
