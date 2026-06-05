@@ -236,42 +236,42 @@ export const PROJECTS = [
   },
   {
     id: 2,
-    title: "Sentiment Analysis Chatbot",
+    title: "AUPP FAQ Chatbot",
     description:
-      "Built a sentiment analysis system integrated with Telegram, using Flask and Python NLP libraries to provide real-time emotional insights from user messages.",
+      "Built a FastAPI chatbot for answering AUPP-related questions using trained ML models, embeddings, and a simple web interface.",
     image:
-      "https://images.unsplash.com/photo-1587560699334-cc4ff634909a?auto=format&fit=crop&w=800&q=80", // Mobile chat interface
-    tags: ["Python", "Flask", "Telegram API", "NLP"],
+      "https://images.unsplash.com/photo-1587560699334-cc4ff634909a?auto=format&fit=crop&w=800&q=80",
+    tags: ["FastAPI", "Machine Learning", "NLP", "Docker"],
     liveUrl: "#",
-    githubURL: "#",
+    githubURL: "https://github.com/laytonglee/chatbot-fastapi-app",
     featured: false,
     category: "AI/ML",
   },
   {
     id: 3,
-    title: "Student Management System",
+    title: "Library Management System",
     description:
-      "Created a Java-based desktop application using Swing and MySQL for managing student records, grades, and course enrollments with a user-friendly interface.",
+      "Built a full-stack, role-based library management system for managing books, borrowing, returns, users, notifications, reports, and audit logs.",
     image:
-      "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=800&q=80", // Students with books and studying
-    tags: ["Java", "Java Swing", "MySQL"],
+      "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=800&q=80",
+    tags: ["React", "Express", "PostgreSQL", "Prisma"],
     liveUrl: "#",
-    githubURL: "#",
+    githubURL: "https://github.com/laytonglee/library-management-system",
     featured: false,
-    category: "Software Development",
+    category: "Full-Stack Development",
   },
   {
     id: 4,
-    title: "Billing System for Private Sector",
+    title: "KhmerLance Freelancer Marketplace",
     description:
-      "Developed a billing system at Fastone Technologies to handle large-scale invoice generation. Optimized performance using Laravel Jobs, Horizon.",
+      "Built a full-stack freelancer marketplace for clients to post projects, freelancers to submit proposals, manage contracts, chat in real time, and leave reviews.",
     image:
-      "https://images.unsplash.com/photo-1554224154-26032ffc0d07?auto=format&fit=crop&w=800&q=80", // Invoice and billing documents
-    tags: ["Laravel", "PHP", "MySQL", "Browsershot"],
-    liveUrl: "#",
-    githubURL: "#",
+      "https://images.unsplash.com/photo-1554224154-26032ffc0d07?auto=format&fit=crop&w=800&q=80",
+    tags: ["Next.js", "Spring Boot", "PostgreSQL", "Cloudflare R2"],
+    liveUrl: "https://khmerlance.site",
+    githubURL: "https://github.com/laytonglee/additi-final-project",
     featured: true,
-    category: "Web Development",
+    category: "Full-Stack Development",
   },
   {
     id: 5,
