@@ -17,14 +17,47 @@ const ContactSection = () => {
     name: "",
     email: "",
     phone: "",
-    communication: "web-development",
     description: "",
   });
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("Form submitted:", formData);
-    alert("Message sent successfully!");
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          access_key: "5478bf69-921a-4b33-9df9-c36f21b3c702",
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          subject: `Portfolio Contact from ${formData.name}`,
+          message: formData.description,
+        }),
+      });
+
+      const result = await response.json();
+
+      if (result.success) {
+        alert("Message sent successfully!");
+
+        setFormData({
+          name: "",
+          email: "",
+          phone: "",
+          description: "",
+        });
+      } else {
+        alert("Something went wrong. Please try again.");
+      }
+    } catch (error) {
+      console.error("Form submission error:", error);
+      alert("Failed to send message. Please try again.");
+    }
   };
 
   return (
@@ -184,7 +217,7 @@ const ContactSection = () => {
                 : "bg-gray-100 border-gray-200 text-gray-900"
             }`}
           >
-            <div className="space-y-4 sm:space-y-5">
+            <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-5">
               <div>
                 <label
                   className={`block text-sm sm:text-base font-medium mb-2 ${
@@ -196,6 +229,7 @@ const ContactSection = () => {
                 <input
                   type="text"
                   placeholder="Name"
+                  required
                   value={formData.name}
                   onChange={(e) =>
                     setFormData({ ...formData, name: e.target.value })
@@ -220,6 +254,7 @@ const ContactSection = () => {
                   type="email"
                   placeholder="Email"
                   value={formData.email}
+                  required
                   onChange={(e) =>
                     setFormData({ ...formData, email: e.target.value })
                   }
@@ -242,6 +277,7 @@ const ContactSection = () => {
                 <input
                   type="tel"
                   placeholder="Phone"
+                  required
                   value={formData.phone}
                   onChange={(e) =>
                     setFormData({ ...formData, phone: e.target.value })
@@ -260,12 +296,13 @@ const ContactSection = () => {
                     isDarkMode ? "text-gray-300" : "text-gray-700"
                   }`}
                 >
-                  Description
+                  Description <span className="text-red-500">*</span>
                 </label>
                 <textarea
                   placeholder="Message"
                   rows="4"
                   value={formData.description}
+                  required
                   onChange={(e) =>
                     setFormData({ ...formData, description: e.target.value })
                   }
@@ -278,12 +315,12 @@ const ContactSection = () => {
               </div>
 
               <button
-                onClick={handleSubmit}
+                type="submit"
                 className="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-2.5 sm:py-3 rounded-lg text-sm sm:text-base transition-colors duration-200"
               >
                 Send Message
               </button>
-            </div>
+            </form>
           </motion.div>
         </motion.div>
       </div>
